@@ -154,7 +154,7 @@ function calResult(){
 function setResult(){
   let point = calResult();
   const resultName = document.querySelector('.resultname');
-  resultName.innerHTML = infoList[point].name;
+  resultName.innerHTML += infoList[point].name;
 
   var resultImg = document.createElement('img');
   const imgDiv = document.querySelector('#resultImg');
@@ -165,10 +165,10 @@ function setResult(){
   imgDiv.appendChild(resultImg);
 
   const resultDesc = document.querySelector('.resultDesc');
-  resultDesc.innerHTML = infoList[point].desc;
+  resultDesc.innerHTML += infoList[point].desc;
 
   const bestDesc1 = document.querySelector('.resultDesc');
-  bestDesc1.innerHTML = "당신에게 추천드리는 베스트1 도시는?"
+  bestDesc1.innerHTML += "당신에게 추천드리는 베스트1 도시는?"
 
   var bestImg1 = document.createElement('img');
   const bestimgDiv1 = document.querySelector('#resultImg');
@@ -179,7 +179,7 @@ function setResult(){
   bestimgDiv1.appendChild(bestImg1);
 
   const bestresultDesc1 = document.querySelector('.resultDesc');
-  bestresultDesc1.innerHTML = cities[0].cityKorean;
+  bestresultDesc1.innerHTML += cities[0].cityKorean;
   bestresultDesc1.innerHTML +=", "
   bestresultDesc1.innerHTML += cities[0].nationKorean;
 }

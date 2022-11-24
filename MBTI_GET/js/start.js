@@ -2,6 +2,12 @@ const main = document.querySelector("#main");
 const qna = document.querySelector("#qna");
 const result = document.querySelector("#result");
 var myMbti=-1
+var mbtimap=[
+  'ISTJ',  'ISFJ',  'INFJ',  'INTJ',  
+  'ISTP',  'ISFP',  'INFP',  'INTP',  
+  'ESTP',  'ESFP',  'ENFP',  'ENTP',  
+  'ESTJ',  'ESFJ',  'ENFJ',  'ENTJ'
+  ];
 const endPoint = 5;
 const select = [0, 0, 0, 0, 0, 0, 0, 0];
 var tendencies=[0.0, 0.0, 0.0, 0.0]
@@ -137,10 +143,10 @@ class Mbti{
 function calResult(){ 
   //console.log(tendencies);
   for(let i = 0; i < cities.length; i++){
-    cities[i].score+=Math.abs(tendencies[0]-cities[i].activity)*weights[0]
-    cities[i].score+=Math.abs(tendencies[1]-cities[i].budget)*weights[1]
-    cities[i].score+=Math.abs(tendencies[2]-cities[i].weather)*weights[2]
-    cities[i].score+=Math.abs(tendencies[3]-cities[i].cultural)*weights[3]
+    cities[i].score+=(Math.abs(tendencies[0]-cities[i].activity)+(Math.random()*2-1))*weights[0]
+    cities[i].score+=(Math.abs(tendencies[1]-cities[i].budget)+(Math.random()*2-1))*weights[1]
+    cities[i].score+=(Math.abs(tendencies[2]-cities[i].weather)+(Math.random()*2-1))*weights[2]
+    cities[i].score+=(Math.abs(tendencies[3]-cities[i].cultural)+(Math.random()*2-1))*weights[3]
     console.log(cities[i].score);
   }
   cities=cities.sort(function(city1, city2){ return city1.score>city2.score?1:-1;});
@@ -148,34 +154,34 @@ function calResult(){
   
   //console.log(cities);
   //ybti appending
-  var ybti='';
-  var ybtinum=0;
-  tendencies[0]<5?ybti+='H':ybti+='T';
-  tendencies[1]<5?ybti+='B':ybti+='L';
-  tendencies[2]<5?ybti+='F':ybti+='S';
-  tendencies[3]<5?ybti+='C':ybti+='M';
-  console.log(ybti);
-  console.log(tendencies);
+  // var ybti='';
+  // var ybtinum=0;
+  // tendencies[0]<5?ybti+='H':ybti+='T';
+  // tendencies[1]<5?ybti+='B':ybti+='L';
+  // tendencies[2]<5?ybti+='F':ybti+='S';
+  // tendencies[3]<5?ybti+='C':ybti+='M';
+  // console.log(ybti);
+  // console.log(tendencies);
 
-  switch(ybti){
-    case "HBFC":num=0;break;
-    case "HBFM":num=1;break;
-    case "HBSC":num=2;break;
-    case "HBSM":num=3;break;
-    case "HLFC":num=4;break;
-    case "HLFM":num=5;break;
-    case "HLSC":num=6;break;
-    case "HLSM":num=7;break;
-    case "TBFC":num=8;break;
-    case "TBFM":num=9;break;
-    case "TBSC":num=10;break;
-    case "TBSM":num=11;break;
-    case "TLFC":num=12;break;
-    case "TLFM":num=13;break;
-    case "TLSC":num=14;break;
-    case "TLSM":num=15;break;
-  }
-  console.log(num);
+  // switch(ybti){
+  //   case "HBFC":num=0;break;
+  //   case "HBFM":num=1;break;
+  //   case "HBSC":num=2;break;
+  //   case "HBSM":num=3;break;
+  //   case "HLFC":num=4;break;
+  //   case "HLFM":num=5;break;
+  //   case "HLSC":num=6;break;
+  //   case "HLSM":num=7;break;
+  //   case "TBFC":num=8;break;
+  //   case "TBFM":num=9;break;
+  //   case "TBSC":num=10;break;
+  //   case "TBSM":num=11;break;
+  //   case "TLFC":num=12;break;
+  //   case "TLFM":num=13;break;
+  //   case "TLSC":num=14;break;
+  //   case "TLSM":num=15;break;
+  // }
+  // console.log(num);
   //var result = select.indexOf(Math.max(...select));
   return myMbti;
 }
@@ -183,7 +189,7 @@ function calResult(){
 function setResult(){
   let point = calResult();
   const resultName = document.querySelector('.resultname');
-  resultName.innerHTML = mbtiinfoList[point].name;
+  resultName.innerHTML += mbtiinfoList[point].name;
 
   var resultImg = document.createElement('img');
   const imgDiv = document.querySelector('#resultImg');
@@ -194,10 +200,10 @@ function setResult(){
   imgDiv.appendChild(resultImg);
 
   const resultDesc = document.querySelector('.resultDesc');
-  resultDesc.innerHTML = mbtiinfoList[point].desc;
+  resultDesc.innerHTML += mbtiinfoList[point].desc;
 
   const bestDesc1 = document.querySelector('.resultDesc');
-  bestDesc1.innerHTML = "당신에게 추천드리는 베스트1 도시는?"
+  bestDesc1.innerHTML += "당신에게 추천드리는 베스트1 도시는? "
 
   var bestImg1 = document.createElement('img');
   const bestimgDiv1 = document.querySelector('#resultImg');
@@ -208,7 +214,7 @@ function setResult(){
   bestimgDiv1.appendChild(bestImg1);
 
   const bestresultDesc1 = document.querySelector('.resultDesc');
-  bestresultDesc1.innerHTML = cities[0].cityKorean;
+  bestresultDesc1.innerHTML += cities[0].cityKorean;
   bestresultDesc1.innerHTML +=", "
   bestresultDesc1.innerHTML += cities[0].nationKorean;
 }
