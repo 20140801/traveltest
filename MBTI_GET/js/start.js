@@ -142,11 +142,17 @@ class Mbti{
 }
 function calResult(){ 
   //console.log(tendencies);
+  //make  tendencies random
+  tendencies[0]+=(Math.random()*2-1)
+  tendencies[1]+=(Math.random()*2-1)
+  tendencies[2]+=(Math.random()*2-1)
+  tendencies[3]+=(Math.random()*2-1)
+  console.log("tendencies: "+tendencies);
   for(let i = 0; i < cities.length; i++){
-    cities[i].score+=(Math.abs(tendencies[0]-cities[i].activity)+(Math.random()*2-1))*weights[0]
-    cities[i].score+=(Math.abs(tendencies[1]-cities[i].budget)+(Math.random()*2-1))*weights[1]
-    cities[i].score+=(Math.abs(tendencies[2]-cities[i].weather)+(Math.random()*2-1))*weights[2]
-    cities[i].score+=(Math.abs(tendencies[3]-cities[i].cultural)+(Math.random()*2-1))*weights[3]
+    cities[i].score+=Math.abs(tendencies[0]-cities[i].activity)*weights[0]
+    cities[i].score+=Math.abs(tendencies[1]-cities[i].budget)*weights[1]
+    cities[i].score+=Math.abs(tendencies[2]-cities[i].weather)*weights[2]
+    cities[i].score+=Math.abs(tendencies[3]-cities[i].cultural)*weights[3]
     console.log(cities[i].score);
   }
   cities=cities.sort(function(city1, city2){ return city1.score>city2.score?1:-1;});
