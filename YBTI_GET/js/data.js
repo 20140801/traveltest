@@ -235,67 +235,67 @@ const qnaList = [
 
 const infoList = [
   {
-    name: '편한게 제일 좋아 HBFC',
-    desc: '설명이다아아'
+    name: '경비 내에서 힐링을 좋아하는 HBFC',
+    desc: '\n힐링을 좋아하고(Healing), 가성비를 챙기며(Bang for the bucks), 추운 날씨가 더운 날씨보다 나으며(Frosty), 역사적인 장소를 좋아하는(Cultural) 성격유형입니다!\n'
   },
   {
-    name: '돌아다니는게 제일 좋아 HBFM',
-    desc: '설명이다아아'
+    name: '낮은 경비로 최고의 효율을 발휘해 힐링하는 HBFM',
+    desc: '\n힐링을 좋아하고(Healing), 가성비를 챙기며(Bang for the bucks), 추운 날씨가 더운 날씨보다 나으며(Frosty), 현대적인 장소를 좋아하는(Modern) 성격유형입니다!\n'
   },
   {
-    name: '플렉스가 제일 좋아 HBSC',
-    desc: '설명이다아아'
+    name: '따뜻한 곳에서 여유롭게 힐링하며 추억을 쌓는 HBSC',
+    desc: '\n힐링을 좋아하고(Healing), 가성비를 챙기며(Bang for the bucks), 더운 날씨가 추운 날씨보다 나으며(Scorching), 역사적인 장소를 좋아하는(Cultural) 성격유형입니다!\n'
   },
   {
-    name: '알뜰한게 최고야 HBSM',
-    desc: '설명이다아아'
+    name: '힐링도 야경도 좋아 HBSM',
+    desc: '\n편안한 여행을 추구하고(Healing), 가성비를 챙기며(Bang for the bucks), 더운 날씨가 추운 날씨보다 나으며(Scorching), 현대적인 장소를 좋아하는(Modern) 성격유형입니다!\n'
   },
   {
-    name: '친구와 함께가 좋아 HLFC',
-    desc: '설명이다아아'
+    name: '멋있는 것 보며 쉬러 떠나자 HLFC',
+    desc: '\n편안한 여행을 추구하고(Healing), 호화로운 여행을 즐기고(Luxury), 추운 날씨가 더운 날씨보다 나으며(Frosty), 역사적인 장소를 좋아하는(Cultural) 성격유형입니다!\n'
   },
   {
-    name: '나 혼자가 좋아 HLFM',
-    desc: '설명이다아아'
+    name: '일단 질러 힐링하자 HLFM',
+    desc: '\n편안한 여행을 추구하고(Healing), 호화로운 여행을 즐기고(Luxury), 추운 날씨가 더운 날씨보다 나으며(Frosty), 현대적인 장소를 좋아하는(Modern) 성격유형입니다!\n'
   },
   {
-    name: '여행은 역시 밤이지 HLSC',
-    desc: '설명이다아아'
+    name: '돈 쓸 시간이다 기다려 휴양지 HLSC',
+    desc: '\n편안한 여행을 추구하고(Healing), 호화로운 여행을 즐기고(Luxury), 더운 날씨가 추운 날씨보다 나으며(Scorching), 역사적인 장소를 좋아하는(Cultural) 성격유형입니다!\n'
   },
   {
-    name: '여행은 역시 낮이지 HLSM',
-    desc: '설명이다아아'
+    name: '럭셔리 힐링이 뭔지 보여줄게 HLSM',
+    desc: '\n편안한 여행을 추구하고(Healing), 호화로운 여행을 즐기고(Luxury), 더운 날씨가 추운 날씨보다 나으며(Scorching), 현대적인 장소를 좋아하는(Modern) 성격유형입니다!\n'
   },
   {
-    name: '편한게 제일 좋아 TBFC',
-    desc: '설명이다아아'
+    name: '여기도 저기도 다 갈거야 TBFC',
+    desc: '\n이곳저곳 돌아다니기를 좋아하고(Tour), 가성비를 챙기며(Bang for the bucks), 추운 날씨가 더운 날씨보다 나으며(Frosty), 역사적인 장소를 좋아하는(Cultural) 성격유형입니다!\n'
   },
   {
-    name: '돌아다니는게 제일 좋아 TBFM',
-    desc: '설명이다아아'
+    name: '이곳저곳 너무 멋있잖아 TBFM',
+    desc: '\n이곳저곳 돌아다니기를 좋아하고(Tour), 가성비를 챙기며(Bang for the bucks), 추운 날씨가 더운 날씨보다 나으며(Frosty), 현대적인 장소를 좋아하는(Modern) 성격유형입니다!\n'
   },
   {
-    name: '플렉스가 제일 좋아 TBSC',
-    desc: '설명이다아아'
+    name: '여기저기 웅장해지는 TBSC',
+    desc: '\n이곳저곳 돌아다니기를 좋아하고(Tour), 가성비를 챙기며(Bang for the bucks), 더운 날씨가 추운 날씨보다 나으며(Scorching), 역사적인 장소를 좋아하는(Cultural) 성격유형입니다!\n'
   },
   {
-    name: '알뜰한게 최고야 TBSM',
-    desc: '설명이다아아'
+    name: '알뜰하게 다 돌아다닐 거야 TBSM',
+    desc: '\n이곳저곳 돌아다니기를 좋아하고(Tour), 가성비를 챙기며(Bang for the bucks), 더운 날씨가 추운 날씨보다 나으며(Scorching), 현대적인 장소를 좋아하는(Modern) 성격유형입니다!\n'
   },
   {
-    name: '친구와 함께가 좋아 TLFC',
-    desc: '설명이다아아'
+    name: '여기도 가보고 싶었어 TLFC',
+    desc: '\n이곳저곳 돌아다니기를 좋아하고(Tour), 호화로운 여행을 즐기고(Luxury), 추운 날씨가 더운 날씨보다 나으며(Frosty), 역사적인 장소를 좋아하는(Cultural) 성격유형입니다!\n'
   },
   {
-    name: '나 혼자가 좋아 TLFM',
-    desc: '설명이다아아'
+    name: '이번 여행은 내가 주도한다 TLFM',
+    desc: '\n이곳저곳 돌아다니기를 좋아하고(Tour), 호화로운 여행을 즐기고(Luxury), 추운 날씨가 더운 날씨보다 나으며(Frosty), 현대적인 장소를 좋아하는(Modern) 성격유형입니다!\n'
   },
   {
-    name: '여행은 역시 밤이지 TLSC',
-    desc: '설명이다아아'
+    name: '거기 알지 일단 가보자 TLSC',
+    desc: '\n이곳저곳 돌아다니기를 좋아하고(Tour), 호화로운 여행을 즐기고(Luxury), 더운 날씨가 추운 날씨보다 나으며(Scorching), 역사적인 장소를 좋아하는(Cultural) 성격유형입니다!\n'
   },
   {
-    name: '여행은 역시 낮이지 TLSM',
-    desc: '설명이다아아'
+    name: '여행에서 난 더 멋져 TLSM',
+    desc: '\n이곳저곳 돌아다니기를 좋아하고(Tour), 호화로운 여행을 즐기고(Luxury), 더운 날씨가 추운 날씨보다 나으며(Scorching), 현대적인 장소를 좋아하는(Modern) 성격유형입니다!\n'
   },
 ]

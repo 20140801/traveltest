@@ -1,6 +1,7 @@
 const main = document.querySelector("#main");
 const qna = document.querySelector("#qna");
 const result = document.querySelector("#result");
+const ct = document.querySelector("#ct");
 var myMbti=-1
 var mbtimap=[
   'ISTJ',  'ISFJ',  'INFJ',  'INTJ',  
@@ -30,38 +31,6 @@ function calResult(){
   }
   cities=cities.sort(function(city1, city2){ return city1.score>city2.score?1:-1;});
   console.log(cities[0])
-  
-  //console.log(cities);
-  //ybti appending
-  // var ybti='';
-  // var ybtinum=0;
-  // tendencies[0]<5?ybti+='H':ybti+='T';
-  // tendencies[1]<5?ybti+='B':ybti+='L';
-  // tendencies[2]<5?ybti+='F':ybti+='S';
-  // tendencies[3]<5?ybti+='C':ybti+='M';
-  // console.log(ybti);
-  // console.log(tendencies);
-
-  // switch(ybti){
-  //   case "HBFC":num=0;break;
-  //   case "HBFM":num=1;break;
-  //   case "HBSC":num=2;break;
-  //   case "HBSM":num=3;break;
-  //   case "HLFC":num=4;break;
-  //   case "HLFM":num=5;break;
-  //   case "HLSC":num=6;break;
-  //   case "HLSM":num=7;break;
-  //   case "TBFC":num=8;break;
-  //   case "TBFM":num=9;break;
-  //   case "TBSC":num=10;break;
-  //   case "TBSM":num=11;break;
-  //   case "TLFC":num=12;break;
-  //   case "TLFM":num=13;break;
-  //   case "TLSC":num=14;break;
-  //   case "TLSM":num=15;break;
-  // }
-  // console.log(num);
-  //var result = select.indexOf(Math.max(...select));
   return myMbti;
 }
 
@@ -76,7 +45,7 @@ function setResult(){
   resultImg.src = imgURL;
   resultImg.alt = point;
   resultImg.classList.add('img-fluid');
-  imgDiv.appendChild(resultImg);
+  //imgDiv.appendChild(resultImg);
 
   const resultDesc = document.querySelector('.resultDesc');
   resultDesc.innerHTML += mbtiinfoList[point].desc;
@@ -183,5 +152,58 @@ function begin(){
     }, 450)
     let qIdx = 0;
     goNext(qIdx);
+  }, 450);
+}
+ct.style.WebkitAnimation = "fadeOut 1s";
+ct.style.animation = "fadeOut 1s";
+ct.style.display = "none";
+
+function setCt(){
+  const ct1Name = document.querySelector('.ct1name');
+  ct1Name.innerHTML += cities[0].cityKorean;
+  ct1Name.innerHTML += ", "
+  ct1Name.innerHTML += cities[0].nationKorean ;
+  var ct1Img = document.createElement('img');
+  const imgDiv1 = document.querySelector('#ct1Img');
+  imgURL = '../cityimage/' + cities[0].index + '.jpg';
+  ct1Img.src = imgURL;
+  ct1Img.classList.add('img-fluid');
+  imgDiv1.appendChild(ct1Img);
+
+  const ct2Name = document.querySelector('.ct2name');
+  ct2Name.innerHTML += cities[1].cityKorean;
+  ct2Name.innerHTML += ", "
+  ct2Name.innerHTML += cities[1].nationKorean ;
+  var ct2Img = document.createElement('img');
+  const imgDiv2 = document.querySelector('#ct2Img');
+  imgURL = '../cityimage/' + cities[1].index + '.jpg';
+  ct2Img.src = imgURL;
+  ct2Img.classList.add('img-fluid');
+  imgDiv2.appendChild(ct2Img);
+  
+  const ct3Name = document.querySelector('.ct3name');
+  ct3Name.innerHTML += cities[2].cityKorean;
+  ct3Name.innerHTML += ", "
+  ct3Name.innerHTML += cities[2].nationKorean ;
+  var ct3Img = document.createElement('img');
+  const imgDiv3 = document.querySelector('#ct3Img');
+  imgURL = '../cityimage/' + cities[2].index + '.jpg';
+  ct3Img.src = imgURL;
+  ct3Img.classList.add('img-fluid');
+  imgDiv3.appendChild(ct3Img);
+}
+
+
+function newbegin(){
+  result.style.WebkitAnimation = "fadeOut 1s";
+  result.style.animation = "fadeOut 1s";
+  setTimeout(() => {
+    ct.style.WebkitAnimation = "fadeIn 1s";
+    ct.style.animation = "fadeIn 1s";
+    setTimeout(() => {
+      result.style.display = "none";
+      ct.style.display = "block"
+    }, 450)
+    setCt()
   }, 450);
 }

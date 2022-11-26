@@ -56,17 +56,18 @@ function setResult(){
   let point = calResult();
   const resultName = document.querySelector('.resultname');
   resultName.innerHTML += infoList[point].name;
-
+  resultName.innerHTML += "\n\n"
+  resultName.innerHTML += infoList[point].desc;
   var resultImg = document.createElement('img');
   const imgDiv = document.querySelector('#resultImg');
   var imgURL = 'img/image-' + point + '.png';
   resultImg.src = imgURL;
   resultImg.alt = point;
   resultImg.classList.add('img-fluid');
-  imgDiv.appendChild(resultImg);
+  // imgDiv.appendChild(resultImg);
 
-  const resultDesc = document.querySelector('.resultDesc');
-  resultDesc.innerHTML += infoList[point].desc;
+  // const resultDesc = document.querySelector('.resultDesc');
+  // resultDesc.innerHTML += infoList[point].desc;
 
   const bestDesc1 = document.querySelector('.resultDesc');
   bestDesc1.innerHTML += "당신에게 추천드리는 베스트1 도시는?"

@@ -1,0 +1,70 @@
+
+#ct{
+    display: none;
+    background-color: white;
+    width: 80%;
+    text-align: center;
+    border-radius: 20px;
+  }
+  
+  .ct1name{
+    font-size: 26px;
+  }
+  .ct2name{
+    font-size: 26px;
+  }
+  .ct3name{
+    font-size: 26px;
+  }
+  
+  .ct1Desc{
+    font-size: 20px;
+  }
+  .ct1Desc{
+    font-size: 20px;
+  }
+  .ct1Desc{
+    font-size: 20px;
+  }
+  
+  .homebt{
+    color: whitesmoke;
+    background-color: black;
+    font-size: 20px;
+    border: 0px;
+    border-radius: 20px;
+  }
+  
+  .homebt:hover, .homebt:focus {
+    background-color: whitesmoke;
+    color: black;
+  }
+  
+  .recommandpage{
+    color: whitesmoke;
+    background-color: black;
+    font-size: 20px;
+    border: 0px;
+    border-radius: 20px;
+  }
+  
+  .recommandpage:hover, .recommandpag:focus {
+    background-color: whitesmoke;
+    color: black;
+  }
+  
+  .rechoice{
+    color: whitesmoke;
+    background-color: black;
+    font-size: 20px;
+    border: 0px;
+    border-radius: 20px;
+  }
+  
+  .rechoice:hover, .rechoice:focus {
+    background-color: whitesmoke;
+    color: black;
+  }
+  
+  
+  

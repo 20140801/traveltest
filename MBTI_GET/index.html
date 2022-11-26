@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>YBTI 추출 페이지</title>
+  <title>MBTI 여행지 추천</title>
   <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -17,21 +17,25 @@
   <link rel="stylesheet" href="./css/qna.css">
   <link rel="stylesheet" href="./css/animation.css">
   <link rel="stylesheet" href="./css/result.css">
+  <link rel="stylesheet" href="./css/ct.css">
 </head>
 
 <body>
   <div class="container">
     <section id="main" class="mx-auto my-5 py-5 px-3">
-      <h1>나의 MBTI에 맞는 여행지는 어디일까?</h1>
-      <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
-        <img src="./img/비행기.png" alt="mainImage" class="img-fluid">
+      <h1>당신의 MBTI는?</h1>
+      <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto my-5">
+        <img src="./img/mbtiimg.png" alt="mainImage" class="img-fluid">
       </div>
-      <p>
-        MBTI란? 나의 성격테스트!<br>
-        당신의 성향에 맞는 여행지를 추천해 드립니다<br>
+      <p class="mx-auto my-7">
+        당신의 MBTI는?<br>
+        MBTI에 맞는 여행지를 추천해 드려요!<br>
         아래 start 버튼을 눌러 시작해 주십시오.
       </p>
       <button type="button" class="btn btn-outline-dark mt-3" onclick="js:begin()">start</button>
+      <a href="../main_page/index.html">
+        <button type="button" class="btn btn-outline-dark mt-3" onclick="js:bkhome()">main</button>
+      </a>
     </section>
     <section id="qna">
       <div class="status mx-auto mt-5">
@@ -45,8 +49,9 @@
 
       </div>
     </section>
+
     <section id="result" class="mx-auto my-5 py-5 px-3">
-      <h1>당신의 YBTI는?!</h1>
+      <h1>이런 여행지가 좋겠군요!</h1>
       <div class="resultname">
 
       </div>
@@ -56,7 +61,57 @@
       <div class="resultDesc">
 
       </div>
-      <a href="../main_page/index.html"><button type="button" class="kakao mt-3 py-2 px-3" onclick="">공유하기</button></a>  
+      <a href="../main_page/index.html">
+        <button type="button" class="homebt mx-2 mt-3 py-2 px-3" onclick="">첫화면으로</button>
+      </a>
+      <button type="button" class="recommandpage mx-2 mt-3 py-2 px-3" onclick="js:newbegin()">추천여행지</button>
+      <!-- <button type="button" class="recommandpage mx-2 mt-3 py-2 px-3" onclick="nextPageValue(nextval)">추천여행지</button> -->
+      <a href="./index.html">
+        <button type="button" class="rechoice mx-2 mt-3 py-2 px-3" onclick="">다시해보기</button>
+      </a>
+      <!-- <a href="../main_page/index.html"> -->
+        <!-- <button type="button" class="kakao mt-3 py-2 px-3" onclick="js:newbegin()">추천여행지</button> -->
+      <!-- </a>   -->
+    </section>
+
+
+    <section id="ct" class="mx-auto my-5 py-5 px-3">
+      <h1>당신의 여행지 TOP 3는?!</h1>
+      <h2>Best 1</h2>
+      <div class="ct1name">
+
+      </div>
+      <div id="ct1Img" class="my-3 col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+
+      </div>
+      <div class="ct1Desc">
+
+      </div>
+
+      <h2>Best 2</h2>
+      <div class="ct2name">
+
+      </div>
+      <div id="ct2Img" class="my-3 col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+
+      </div>
+      <div class="ct2Desc">
+
+      </div>
+
+      <h2>Best 3</h2>
+      <div class="ct3name">
+
+      </div>
+      <div id="ct3Img" class="my-3 col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+
+      </div>
+      <div class="ct3Desc">
+
+      </div>
+      <a href="../main_page/index.html">
+        <button type="button" class="kakao mt-3 py-2 px-3" onclick="">공유하기</button>
+      </a>  
     </section>
     <script src="./js/data.js" charset="utf-8"></script>
     <script src="./js/start.js" charset="utf-8"></script>
