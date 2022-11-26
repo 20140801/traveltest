@@ -47,8 +47,8 @@ function setResult(){
   resultImg.classList.add('img-fluid');
   //imgDiv.appendChild(resultImg);
 
-  const resultDesc = document.querySelector('.resultDesc');
-  resultDesc.innerHTML += mbtiinfoList[point].desc;
+  //const resultDesc = document.querySelector('.resultDesc');
+  //resultDesc.innerHTML += mbtiinfoList[point].desc;
 
   const bestDesc1 = document.querySelector('.resultDesc');
   bestDesc1.innerHTML += "당신에게 추천드리는 베스트1 도시는? "

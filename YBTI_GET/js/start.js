@@ -56,7 +56,6 @@ function setResult(){
   let point = calResult();
   const resultName = document.querySelector('.resultname');
   resultName.innerHTML += infoList[point].name;
-  resultName.innerHTML += "\n\n"
   resultName.innerHTML += infoList[point].desc;
   var resultImg = document.createElement('img');
   const imgDiv = document.querySelector('#resultImg');
@@ -166,5 +165,58 @@ function begin(){
     }, 450)
     let qIdx = 0;
     goNext(qIdx);
+  }, 450);
+}
+ct.style.WebkitAnimation = "fadeOut 1s";
+ct.style.animation = "fadeOut 1s";
+ct.style.display = "none";
+
+function setCt(){
+  const ct1Name = document.querySelector('.ct1name');
+  ct1Name.innerHTML += cities[0].cityKorean;
+  ct1Name.innerHTML += ", "
+  ct1Name.innerHTML += cities[0].nationKorean ;
+  var ct1Img = document.createElement('img');
+  const imgDiv1 = document.querySelector('#ct1Img');
+  imgURL = '../cityimage/' + cities[0].index + '.jpg';
+  ct1Img.src = imgURL;
+  ct1Img.classList.add('img-fluid');
+  imgDiv1.appendChild(ct1Img);
+
+  const ct2Name = document.querySelector('.ct2name');
+  ct2Name.innerHTML += cities[1].cityKorean;
+  ct2Name.innerHTML += ", "
+  ct2Name.innerHTML += cities[1].nationKorean ;
+  var ct2Img = document.createElement('img');
+  const imgDiv2 = document.querySelector('#ct2Img');
+  imgURL = '../cityimage/' + cities[1].index + '.jpg';
+  ct2Img.src = imgURL;
+  ct2Img.classList.add('img-fluid');
+  imgDiv2.appendChild(ct2Img);
+  
+  const ct3Name = document.querySelector('.ct3name');
+  ct3Name.innerHTML += cities[2].cityKorean;
+  ct3Name.innerHTML += ", "
+  ct3Name.innerHTML += cities[2].nationKorean ;
+  var ct3Img = document.createElement('img');
+  const imgDiv3 = document.querySelector('#ct3Img');
+  imgURL = '../cityimage/' + cities[2].index + '.jpg';
+  ct3Img.src = imgURL;
+  ct3Img.classList.add('img-fluid');
+  imgDiv3.appendChild(ct3Img);
+}
+
+
+function newbegin(){
+  result.style.WebkitAnimation = "fadeOut 1s";
+  result.style.animation = "fadeOut 1s";
+  setTimeout(() => {
+    ct.style.WebkitAnimation = "fadeIn 1s";
+    ct.style.animation = "fadeIn 1s";
+    setTimeout(() => {
+      result.style.display = "none";
+      ct.style.display = "block"
+    }, 450)
+    setCt()
   }, 450);
 }

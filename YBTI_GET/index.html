@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="./css/qna.css">
   <link rel="stylesheet" href="./css/animation.css">
   <link rel="stylesheet" href="./css/result.css">
+  <link rel="stylesheet" href="./css/ct.css">
 </head>
 
 <body>
@@ -56,7 +57,52 @@
       <div class="resultDesc">
 
       </div>
-      <a href="../main_page/index.html"><button type="button" class="kakao mt-3 py-2 px-3" onclick="">공유하기</button></a>
+      <a href="../main_page/index.html">
+        <button type="button" class="homebt mx-2 mt-3 py-2 px-3" onclick="">첫화면으로</button>
+      </a>
+      <button type="button" class="recommandpage mx-2 mt-3 py-2 px-3" onclick="js:newbegin()">추천여행지</button>
+      <!-- <button type="button" class="recommandpage mx-2 mt-3 py-2 px-3" onclick="nextPageValue(nextval)">추천여행지</button> -->
+      <a href="./index.html">
+        <button type="button" class="rechoice mx-2 mt-3 py-2 px-3" onclick="">다시해보기</button>
+      </a>
+    </section>
+    <section id="ct" class="mx-auto my-5 py-5 px-3">
+      <h1>당신의 여행지 TOP 3는?!</h1>
+      <h2>Best 1</h2>
+      <div class="ct1name">
+
+      </div>
+      <div id="ct1Img" class="my-3 col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+
+      </div>
+      <div class="ct1Desc">
+
+      </div>
+
+      <h2>Best 2</h2>
+      <div class="ct2name">
+
+      </div>
+      <div id="ct2Img" class="my-3 col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+
+      </div>
+      <div class="ct2Desc">
+
+      </div>
+
+      <h2>Best 3</h2>
+      <div class="ct3name">
+
+      </div>
+      <div id="ct3Img" class="my-3 col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+
+      </div>
+      <div class="ct3Desc">
+
+      </div>
+      <a href="../main_page/index.html">
+        <button type="button" class="kakao mt-3 py-2 px-3" onclick="">메인으로 가기</button>
+      </a>  
     </section>
     <script src="./js/data.js" charset="utf-8"></script>
     <script src="./js/start.js" charset="utf-8"></script>
